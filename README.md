@@ -38,4 +38,6 @@ Acknowledgments
 •	Open Trivia Database (OpenTDB): For providing a free API with trivia questions.
 •	Font Awesome: For providing icons used in the navigation.
 ________________________________________
+## Live Demo
+You can view a live demo of this app by visiting [Live Demo]( https://kratikrat.github.io/quiz-app/).
 
