@@ -1,0 +1,234 @@
+/* Light theme colors */
+:root {
+    --background-color: #f8f6f6;
+    --container-background: white;
+    --button-background:#573ADB ;
+    --button-text-color: white;
+    --button-hover-background: #352094;
+    --answer-option-background: #f1f1f1;
+    --answer-option-hover-background: #ddd;
+    --text-color: #333;
+    --score-text-color: #333;
+    --timer-text-color: red;
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+    --background-color: #181818;
+    --container-background: #333;
+    --button-background:#352094 ;
+    --button-text-color: white;
+    --button-hover-background:#573ADB;
+    --answer-option-background: #444;
+    --answer-option-hover-background: #555;
+    --text-color: white;
+    --score-text-color: white;
+    --timer-text-color: #f31212;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:var(--button-background);
+    padding: 20px 42px;
+    border-radius: 40px;
+    margin: 5px 5px;
+    border: 2px solid var(--button-hover-background);
+    box-shadow: 0px 0px 20px var(--button-hover-background); /* Default glow */
+    
+}
+nav h2{
+    font-size: 30px;
+    font-weight: 850;
+    color: var(--button-text-color);
+}
+
+#choose-topic-container, #quiz-container {
+    background-color: var(--container-background);
+    padding: 20px;
+    border-radius: 10px;
+    border: .25px solid var(--button-hover-background);
+    box-shadow: 0px 0px 20px var(--button-hover-background);
+    height: 70%;
+    width: 350px;
+    text-align: center;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin:2vw 0;
+}
+#choose-topic-container h1{
+    margin: 2.5vw;
+}
+#choose-topic-container label{
+        margin: 0.5vw;
+    
+}
+
+
+.btn {
+    padding: 10px 20px;
+    margin: 60px 10px;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px var(--button-hover-background);
+
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+   
+
+}
+button:disabled {
+    background-color: #f2ebeb;
+    color: #181818;
+}
+
+.btn:hover {
+    font-weight: 800;
+    background-color: var(--button-hover-background);
+    color: var(--button-text-color);
+}
+
+
+#question-container{
+    margin: 1vw;
+}
+
+#answer-container {
+    margin-top: 30px;
+  
+}
+
+.answer-option {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--answer-option-background);
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.answer-option:hover {
+    background-color: var(--answer-option-hover-background);
+}
+
+#score-container {
+    margin-top: 20px;
+    color: var(--score-text-color);
+}
+
+#timer {
+    color: var(--timer-text-color);
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 1vw;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    bottom: 0;
+    position:fixed;
+    border: .25px solid var(--button-hover-background);
+   
+}
+
+/* Dark mode media query for automatic theme switching */
+@media (prefers-color-scheme: dark) {
+    body {
+        width: 100%;
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+
+    #choose-topic-container, #quiz-container {
+   
+        background-color: var(--container-background);
+    }
+
+    button {
+        background-color: var(--button-background);
+        color: var(--button-text-color);
+    }
+
+    .answer-option {
+        background-color: var(--answer-option-background);
+    }
+
+    .answer-option:hover {
+        background-color: var(--answer-option-hover-background);
+    }
+
+    #score-container {
+        color: var(--score-text-color);
+    }
+
+    #timer {
+        color: var(--timer-text-color);
+    }
+}
+
+
+/* Apply styles for devices with a max-width of 480px */
+@media only screen and (max-width: 480px) {
+    #choose-topic-container, #quiz-container {
+        margin: 12vw 0vw;
+        width: 90%; /* Adjust width to 90% on small screens */
+    }
+    #choose-topic-container h1{
+        margin: 5vw;
+    }
+    #choose-topic-container label{
+            margin: 0.5vw;
+        
+    }
+    /* You can add more styles for small screens here, for example: */
+    #question-container {
+        font-size: 14px; /* Reduce font size for better readability */
+    }
+
+    #answer-container {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    button {
+        padding: 8px 15px; /* Adjust button size for smaller screens */
+    }
+}

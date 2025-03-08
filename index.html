@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h2>Quiz App</h2>
+        <i class="ri-moon-fill" id="theme-toggle" onclick="toggleTheme()"></i>
+    </nav>
+    <div id="choose-topic-container">
+        <h1>Choose a Topic</h1>
+        <label for="category-select">Choose a category </label>
+        <select id="category-select">
+            <option value="9">General Knowledge</option>
+            <option value="17">Science: Computers</option>
+            <option value="21">Sports</option>
+            <option value="22">Geography</option>
+            <option value="23">History</option>
+            <option value="11">Entertainment: Film</option>
+        </select>
+        <button id="start-quiz-btn" class="btn">Start Quiz</button>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Kratik Rathore. All rights reserved.</p>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
